@@ -34,8 +34,13 @@ def process_request(number_of_requests):
             break
 
 
-while True:
-    generate_request(random.randint(1, 10))
-    process_request(random.randint(1, 10))
-    print(f"\nQUEUE SIZE: {queue.qsize()}\n")
-    time.sleep(1)
+def main():
+    while True:
+        generate_request(random.randint(1, 10))
+        process_request(random.randint(1, 10))
+        print(f"\nQUEUE SIZE: {queue.qsize()}\n")
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    main()
